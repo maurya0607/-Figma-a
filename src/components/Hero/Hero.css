@@ -1,0 +1,129 @@
+.hero-section {
+  padding: 70px 54px;
+  min-height: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-decor-left {
+  position: absolute;
+  left: 20px;
+  top: 60px;
+  width: 60px;
+  height: 240px;
+  opacity: 0.85;
+}
+
+.hero-content {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 5.5vw, 77px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.hero-subtitle {
+  /* font-size: clamp(10px, 1.5vw, 20px); */
+  font-size: clamp(10px, 1.4vw, 20px);
+  color: var(--text-medium);
+  max-width: 440px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* Scattered Avatars Layout */
+.hero-avatars-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.avatars-row {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.avatars-row.bottom {
+  margin-top: -5px;
+  gap: 30px;
+}
+
+.avatar-item {
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  border: 3px solid #ffffff;
+}
+
+.avatar-item:hover {
+  transform: translateY(-8px) scale(1.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-purple);
+}
+
+/* Responsive Avatar Sizes */
+.avatar-item.lg {
+  width: 96px;
+  height: 96px;
+}
+
+.avatar-item.md {
+  width: 80px;
+  height: 80px;
+}
+
+.avatar-item.sm {
+  width: 64px;
+  height: 64px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px 30px;
+  }
+  
+  .hero-decor-left {
+    display: none;
+  }
+  
+  .hero-avatars-container {
+    gap: 20px;
+  }
+  
+  .avatar-item.lg {
+    width: 74px;
+    height: 74px;
+  }
+
+  .avatar-item.md {
+    width: 60px;
+    height: 60px;
+  }
+
+  .avatar-item.sm {
+    width: 48px;
+    height: 48px;
+  }
+}
